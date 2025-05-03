@@ -56,7 +56,7 @@ export default {
 
     const base = import.meta.env.DEV
       ? '/content'
-      : 'null-right-now'
+      : 'https://cdn.jsdelivr.net/gh/DeceitfulDragon/unseen-things@main/public/content/'
 
     onMounted(async () => {
       // fetch markdown

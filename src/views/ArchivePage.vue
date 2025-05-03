@@ -42,7 +42,7 @@ export default {
 
     const base = import.meta.env.DEV
       ? '/content'
-      : 'https://raw.githubusercontent.com/deceitfuldragon/unseen-things/main/public/content'
+      : 'https://cdn.jsdelivr.net/gh/DeceitfulDragon/unseen-things@main/public/content/'
 
     onMounted(async () => {
       // fetch list of IDs
