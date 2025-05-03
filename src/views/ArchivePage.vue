@@ -2,8 +2,7 @@
   <div>
     <h2 class="text-3xl mb-6">Archive</h2>
 
-    <div v-if="items.length"
-         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div v-if="items.length" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <router-link
         v-for="item in items"
         :key="item.id"
@@ -11,7 +10,7 @@
         class="block bg-gray-950 border border-gray-800 rounded overflow-hidden transform transition duration-200 hover:shadow-lg hover:scale-102"
       >
         <img
-          :src="thumbnailUrl(item.thumbnail)"
+          :src="item.thumbnail"
           alt=""
           class="w-full h-40 object-cover"
         />
@@ -50,31 +49,23 @@ export default {
       const ids     = await listRes.json()
 
       // for each ID, fetch .md and pull frontmatter
-      const promises = ids.map(async id => {
-        const res  = await fetch(`${base}/${id}.md`)
-        const text = await res.text()
-        const { data } = matter(text)
-
-        return {
-          id,
-          title:     data.title,
-          thumbnail: data.thumbnail,
-          lastSeen:  data.lastSeen,
-          entryDate: data.entryDate
-        }
-      })
-
-      items.value = await Promise.all(promises)
+      items.value = await Promise.all(
+        ids.map(async id => {
+          const res  = await fetch(`${base}/${id}.md`)
+          const text = await res.text()
+          const { data } = matter(text)
+          return {
+            id,
+            title:     data.title,
+            thumbnail: data.thumbnail,
+            lastSeen:  data.lastSeen,
+            entryDate: data.entryDate
+          }
+        })
+      )
     })
 
-    // resolve local vs CDN
-    function thumbnailUrl(path) {
-      return path.startsWith('http')
-        ? path
-        : (import.meta.env.DEV ? `/content/${path}` : `${base}/${path}`)
-    }
-
-    return { items, thumbnailUrl }
+    return { items }
   }
 }
 </script>
