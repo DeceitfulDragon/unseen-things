@@ -2,7 +2,7 @@
   "name": "unseen-things",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://deceitfuldragon.github.io/unseen-things/",
+  "homepage": "https://www.unseen-things.net/",
   "type": "module",
   "scripts": {
     "dev": "vite",
