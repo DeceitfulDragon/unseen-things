@@ -3,9 +3,10 @@ title: "Blue Mouth"
 date: "Early 1990s"
 entryDate: "Early 1990s"
 lastSeen: "2014"
-thumbnail: "thumbnails/blue-mouth.jpg"
+thumbnail: "https://i.postimg.cc/NFyjJ5NQ/blue-mouth-2014-encoded.png"
 ---
 ::: tab Details
+
 I’ve settled on “Blue Mouth” as the name for this one. I think it fits.
 Blue Mouth is a USPS Collection Box. Just a plain old 1980’s collection box. Rounded blue top and the pull-down chute on the front. I think the first sighting was in the early 90s, but it’s hard to really track this thing. The only visible difference is that it’s missing its collection information. No pickup schedule, no ZIP code, no branch ID. Just the old USPS eagle logo on the side. It blends in perfectly, that’s the point.  
 
@@ -240,4 +241,8 @@ Letters grow more fluent over time, indicating an evolving intelligence?
 When confronted with direct intervention (like the USPS lockout in Greeneville) it simply moves, leaving behind dead concrete.
 There is no indication it has been destroyed, damaged, or even slowed.  
 
+:::
+
+::: tab Images
+![blue-mouth-2014-encoded.png](https://i.postimg.cc/NFyjJ5NQ/blue-mouth-2014-encoded.png)
 :::
